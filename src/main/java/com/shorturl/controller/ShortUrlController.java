@@ -29,7 +29,6 @@ public class ShortUrlController {
 	@GetMapping(value = "/{code}")
 	public void redirectToUrl(@PathVariable String code, HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		System.err.println("code==" + code);
 		urlService.redirectUrl(request, response, code);
 	}
 
